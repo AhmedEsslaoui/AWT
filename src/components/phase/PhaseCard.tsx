@@ -38,10 +38,19 @@ export function PhaseCard({ phase, delay }: PhaseCardProps) {
           <PhaseList items={phase.conditions} />
         </div>
 
-        <div>
-          <h4 className="font-medium mb-2">Actions:</h4>
-          <PhaseList items={phase.actions} />
-        </div>
+        {phase.actions && (
+          <div>
+            <h4 className="font-medium mb-2">Actions:</h4>
+            <PhaseList items={phase.actions} />
+          </div>
+        )}
+
+        {phase.actionsRequired && (
+          <div>
+            <h4 className="font-medium mb-2">Actions Required:</h4>
+            <PhaseList items={phase.actionsRequired} />
+          </div>
+        )}
       </div>
     </motion.div>
   );
