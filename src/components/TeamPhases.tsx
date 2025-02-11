@@ -27,7 +27,8 @@ export function TeamPhases() {
           </div>
           <TeamNotes 
             notes={team.important} 
-            delay={index * 0.3 + team.phases.length * 0.2} 
+            delay={index * 0.3 + team.phases.length * 0.2}
+            title={team.titles?.important}
           />
         </motion.div>
       ))}

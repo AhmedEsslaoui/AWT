@@ -11,10 +11,19 @@ export interface Phase {
   conditions: ListItem[];
   actions?: string[];
   actionsRequired?: string[];
+  titles?: {
+    phase: string;
+    conditions: string;
+    actions?: string;
+    actionsRequired?: string;
+  };
 }
 
 export interface Team {
   name: string;
   phases: Phase[];
   important: string[];
+  titles?: {
+    important: string;
+  };
 }

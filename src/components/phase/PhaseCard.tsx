@@ -26,28 +26,30 @@ export function PhaseCard({ phase, delay }: PhaseCardProps) {
     >
       <div className="flex items-center gap-2 mb-4">
         <PhaseIcon level={phase.level} />
-        <h3 className="text-xl font-semibold">Phase {phase.level} (AWT {phase.awt})</h3>
+        <h3 className="text-xl font-semibold">
+          {phase.titles?.phase || `Phase ${phase.level}`} (AWT {phase.awt})
+        </h3>
       </div>
 
       <div className="space-y-4">
         <div>
           <h4 className="font-medium mb-2 flex items-center gap-2">
             <AlertCircle className="w-4 h-4" />
-            Conditions:
+            {phase.titles?.conditions || 'Conditions:'}
           </h4>
           <PhaseList items={phase.conditions} />
         </div>
 
         {phase.actions && (
           <div>
-            <h4 className="font-medium mb-2">Actions:</h4>
+            <h4 className="font-medium mb-2">{phase.titles?.actions || 'Actions:'}</h4>
             <PhaseList items={phase.actions} />
           </div>
         )}
 
         {phase.actionsRequired && (
           <div>
-            <h4 className="font-medium mb-2">Actions Required:</h4>
+            <h4 className="font-medium mb-2">{phase.titles?.actionsRequired || 'Actions Required:'}</h4>
             <PhaseList items={phase.actionsRequired} />
           </div>
         )}
