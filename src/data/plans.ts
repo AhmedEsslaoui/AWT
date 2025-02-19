@@ -6,7 +6,7 @@ export const plans: TeamPlan[] = [
     phases: [
       {
         level: 1,
-        awt: '≤ 2 mins',
+        awt: '≤ 5 mins',
         conditions: ['Normal operations'],
         actions: ['Each agent handles up to 7 chats']
       },
@@ -44,7 +44,7 @@ export const plans: TeamPlan[] = [
     phases: [
       {
         level: 1,
-        awt: '≤ 2 mins',
+        awt: '≤ 5 mins',
         conditions: ['Normal operations'],
         actions: ['Each agent handles up to 7 chats']
       },
